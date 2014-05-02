@@ -1,0 +1,205 @@
+{
+    "ospf_config": {
+        "areas": [
+            {
+                "id": "0",
+                "networks": [
+                    "172.16.0.0/12",
+                    "10.0.0.0/8",
+                    "20.0.0.0/8",
+                    "30.0.0.0/8",
+                    "40.0.0.0/8",
+                    "50.0.0.0/8"
+                ]
+            }
+        ]
+    },
+    "dps": {
+        "dp0": {
+            "controller":"tcp:127.0.0.1:6633",
+            "datapath_id":"7266767372667673"
+             }
+                        
+    },
+    "vms": {
+        "rfvmA": {
+            "rf_interfaces": [
+                {
+                    "name": "eth0",
+                    "mac": "02:a0:a0:a0:a0:a0",
+                    "bridge": "lxcbr0",
+                    "ip": "192.168.10.101",
+                    "netmask": "255.255.255.0"
+                }
+            ],
+            "quagga_interfaces": [
+                {
+                    "name": "eth1",
+                    "pair": "rfvmA.1",
+                    "dp_id": "8", 
+                    "id": "1", 
+                    "dp": "dp0",
+                    "dp_port": "1", 
+                    "network": "172.31.1.1/24"
+                },
+                {
+                    "name": "eth2",
+                    "pair": "rfvmA.2",
+                    "dp_id": "8", 
+                    "dp_port": "2", 
+                    "dp": "dp0",
+                    "id": "2", 
+                    "network": "10.0.0.1/24"
+                },
+                {
+                    "name": "eth3",
+                    "pair": "rfvmA.3",
+                    "dp_id": "8", 
+                    "dp_port": "3", 
+                    "dp": "dp0",
+                    "id": "3", 
+                    "network": "30.0.0.1/24"
+                },
+                {
+                    "name": "eth4",
+                    "pair": "rfvmA.4",
+                    "dp_id": "8", 
+                    "dp_port": "4", 
+                    "dp": "dp0",
+                    "id": "4", 
+                    "network": "50.0.0.1/24"
+                }
+            ]
+          },
+         "rfvmB": {
+            "rf_interfaces": [
+                {
+                    "name": "eth0",
+                    "mac": "02:b0:b0:b0:b0:b0",
+                    "bridge": "lxcbr0",
+                    "ip": "192.168.10.102",
+                    "netmask": "255.255.255.0"
+                }
+            ],
+            "quagga_interfaces": [
+                {
+                    "name": "eth1",
+                    "pair": "rfvmB.1",
+                    "dp_id": "7", 
+                    "id": "1", 
+                    "dp": "dp0",
+                    "dp_port": "1", 
+                    "network": "172.31.2.1/24"
+                },
+                {
+                    "name": "eth2",
+                    "pair": "rfvmB.2",
+                    "dp_id": "7", 
+                    "id": "2", 
+                    "dp": "dp0",
+                    "dp_port": "2", 
+                    "network": "10.0.0.2/24"
+                },
+                {
+                    "name": "eth3",
+                    "pair": "rfvmB.3",
+                    "dp_id": "7", 
+                    "dp": "dp0",
+                    "id": "3", 
+                    "dp_port": "3", 
+                    "network": "40.0.0.2/24"
+                }
+            ]
+           },
+          "rfvmC": {
+            "rf_interfaces": [
+                {
+                    "name": "eth0",
+                    "mac": "02:c0:c0:c0:c0:c0",
+                    "bridge": "lxcbr0",
+                    "ip": "192.168.10.103",
+                    "netmask": "255.255.255.0"
+                }
+            ],
+            "quagga_interfaces": [
+                {
+                    "name": "eth1",
+                    "pair": "rfvmC.1",
+                    "dp_id": "6", 
+                    "dp_port": "1", 
+                    "dp": "dp0",
+                    "id": "1", 
+                    "network": "172.31.3.1/24"
+                },
+                {
+                    "name": "eth2",
+                    "pair": "rfvmC.2",
+                    "dp_id": "6", 
+                    "dp_port": "2", 
+                    "dp": "dp0",
+                    "id": "2", 
+                    "network": "20.0.0.3/24"
+                },
+                {
+                    "name": "eth3",
+                    "pair": "rfvmC.3",
+                    "dp_id": "6", 
+                    "dp_port": "3", 
+                    "dp": "dp0",
+                    "id": "3", 
+                    "network": "30.0.0.3/24"
+                }
+             ]
+           },
+          "rfvmD": {
+            "rf_interfaces": [
+                {
+                    "name": "eth0",
+                    "mac": "02:a0:a0:a0:a0:a0",
+                    "bridge": "lxcbr0",
+                    "ip": "192.168.10.104",
+                    "netmask": "255.255.255.0"
+                }
+            ],
+            "quagga_interfaces": [
+                {
+                    "name": "eth1",
+                    "pair": "rfvmD.1",
+                    "dp_id": "5", 
+                    "dp_port": "1", 
+                    "dp": "dp0",
+                    "id": "1", 
+                    "network": "172.31.4.1/24"
+                },
+                {
+                    "name": "eth2",
+                    "pair": "rfvmD.2",
+                    "dp_id": "5", 
+                    "dp_port": "2", 
+                    "dp": "dp0",
+                    "id": "2", 
+                    "network": "40.0.0.4/24"
+                },
+                {
+                    "name": "eth3",
+                    "pair": "rfvmD.3",
+                    "dp_id": "5", 
+                    "dp_port": "3", 
+                    "dp": "dp0",
+                    "id": "3", 
+                    "network": "20.0.0.4/24"
+                },
+                {
+                    "name": "eth4",
+                    "pair": "rfvmD.4",
+                    "dp_id": "5", 
+                    "dp_port": "4", 
+                    "dp": "dp0",
+                    "id": "4", 
+                    "network": "50.0.0.4/24"
+                }
+             ]
+          }
+    }
+}
+

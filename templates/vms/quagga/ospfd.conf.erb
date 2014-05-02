@@ -1,0 +1,19 @@
+password routeflow
+enable password routeflow
+!
+router ospf
+<% ospf_config=scope.function_hiera(['ospf_config']) -%>
+<% ospf_config['areas'].each do |area| -%>
+   <% area['networks'].each do |network| -%>
+       network <%= network -%> area <%= area['id'] %>
+   <% end -%>
+<% end -%>
+!
+log file /var/log/quagga/ospfd.log
+!
+<% @quagga_interfaces.each do |interface| %>
+interface <%= interface['name'] %>
+	ip ospf hello-interval 1
+	ip ospf dead-interval 4
+!
+<% end -%>

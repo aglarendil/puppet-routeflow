@@ -1,0 +1,27 @@
+{
+"::routeflow::vm::templates_output": "/etc/routeflow/vms",
+"::routeflow::vm::config_dirs": [
+ "/",
+ "/rootfs",
+ "/rootfs/etc",
+ "/rootfs/etc/quagga",
+ "/rootfs/etc/network",
+ "/rootfs/opt",
+ "/rootfs/opt/rfclient",
+ "/rootfs/root"
+ ],
+"routeflow::vm::packages": [
+  "quagga",
+  "libboost-thread-dev",
+  "libboost-system-dev",
+  "libboost-filesystem-dev",
+  "libboost-program-options-dev",
+  "rsyslog",
+  "vlan",
+  "tcpdump"
+ ],
+"lxc_dir": "/var/lib/lxc",
+"lxc_bridge": "lxcbr0",
+"rfclient_path": "/usr/local/bin/rfclient"
+}
+

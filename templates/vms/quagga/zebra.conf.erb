@@ -1,0 +1,12 @@
+password routeflow
+enable password routeflow
+!
+log file /var/log/quagga/zebra.log
+password 123
+enable password 123
+!
+<% @quagga_interfaces.each do |interface|  %>
+interface <%= interface['name'] %>
+        ip address <%= interface['network'] %>
+!
+<% end %>

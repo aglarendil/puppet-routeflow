@@ -1,0 +1,10 @@
+---
+:backends:
+  - yaml
+  - json
+:yaml:
+  :datadir: %{home_directory}/routeflow_data
+:merge_behavior: deeper
+:hierarchy:
+  - vms
+  - common
