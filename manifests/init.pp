@@ -23,9 +23,11 @@ class routeflow(
  Service['mongodb']->Class['::Routeflow::Rfserver']
  Service['mongodb']->Class["::Routeflow::Controller::$controller"]
  Class['::Routeflow::Mongodb']->Class['::Routeflow::Rfserver']
+ Class['::Routeflow::Mongodb']->Routeflow::Vm::Create<||>
  Service['mongodb']->Routeflow::Vm::Create<||>
  class {'routeflow::mongodb':}
  $ports=getports(hiera('vms'))
+ Service['controller_pox']->Service['rfserver']
  Routeflow::Vm::Create<||>->Class[Routeflow::Ovs]
- exec{'/usr/bin/ovs-vsctl del-br dp0 || true':}->class {'routeflow::ovs': ports=>$ports, bridges=> hiera('dps')} 
+ exec{'/usr/bin/ovs-vsctl del-br dp0 && /usr/bin/ovs-vsctl emer-reset || true':}->class {'routeflow::ovs': ports=>$ports, bridges=> hiera('dps')} 
 }

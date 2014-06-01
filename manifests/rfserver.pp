@@ -9,8 +9,8 @@ class routeflow::rfserver (
   }
   service {'rfserver':
     provider => base,
-    start  => "PYTHONPATH=\$PYTHONPATH:${rfpath} ${rfpath}/rfserver/rfserver.py /etc/rfserver.mapping.csv &" ,
-    stop   => "kill `pgrep -f rfserver.py`",
+    start  => "PYTHONPATH=\$PYTHONPATH:${rfpath} ${rfpath}/rfserver/rfserver.py /etc/rfserver.mapping.csv 1>/var/log/rfserver.log 2>&1 &" ,
+    stop   => "pkill -f rfserver.py",
     status => "pgrep -f rfserver.py",
     ensure => $ensure
   }

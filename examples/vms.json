@@ -36,7 +36,7 @@
                 {
                     "name": "eth1",
                     "pair": "rfvmA.1",
-                    "dp_id": "8", 
+                    "dp_id": "5", 
                     "id": "1", 
                     "dp": "dp0",
                     "dp_port": "1", 
@@ -45,7 +45,7 @@
                 {
                     "name": "eth2",
                     "pair": "rfvmA.2",
-                    "dp_id": "8", 
+                    "dp_id": "5", 
                     "dp_port": "2", 
                     "dp": "dp0",
                     "id": "2", 
@@ -54,7 +54,7 @@
                 {
                     "name": "eth3",
                     "pair": "rfvmA.3",
-                    "dp_id": "8", 
+                    "dp_id": "5", 
                     "dp_port": "3", 
                     "dp": "dp0",
                     "id": "3", 
@@ -63,7 +63,7 @@
                 {
                     "name": "eth4",
                     "pair": "rfvmA.4",
-                    "dp_id": "8", 
+                    "dp_id": "5", 
                     "dp_port": "4", 
                     "dp": "dp0",
                     "id": "4", 
@@ -85,7 +85,7 @@
                 {
                     "name": "eth1",
                     "pair": "rfvmB.1",
-                    "dp_id": "7", 
+                    "dp_id": "6", 
                     "id": "1", 
                     "dp": "dp0",
                     "dp_port": "1", 
@@ -94,7 +94,7 @@
                 {
                     "name": "eth2",
                     "pair": "rfvmB.2",
-                    "dp_id": "7", 
+                    "dp_id": "6", 
                     "id": "2", 
                     "dp": "dp0",
                     "dp_port": "2", 
@@ -103,7 +103,7 @@
                 {
                     "name": "eth3",
                     "pair": "rfvmB.3",
-                    "dp_id": "7", 
+                    "dp_id": "6", 
                     "dp": "dp0",
                     "id": "3", 
                     "dp_port": "3", 
@@ -125,7 +125,7 @@
                 {
                     "name": "eth1",
                     "pair": "rfvmC.1",
-                    "dp_id": "6", 
+                    "dp_id": "7", 
                     "dp_port": "1", 
                     "dp": "dp0",
                     "id": "1", 
@@ -134,7 +134,7 @@
                 {
                     "name": "eth2",
                     "pair": "rfvmC.2",
-                    "dp_id": "6", 
+                    "dp_id": "7", 
                     "dp_port": "2", 
                     "dp": "dp0",
                     "id": "2", 
@@ -143,7 +143,7 @@
                 {
                     "name": "eth3",
                     "pair": "rfvmC.3",
-                    "dp_id": "6", 
+                    "dp_id": "7", 
                     "dp_port": "3", 
                     "dp": "dp0",
                     "id": "3", 
@@ -155,7 +155,7 @@
             "rf_interfaces": [
                 {
                     "name": "eth0",
-                    "mac": "02:a0:a0:a0:a0:a0",
+                    "mac": "02:d0:d0:d0:d0:d0",
                     "bridge": "lxcbr0",
                     "ip": "192.168.10.104",
                     "netmask": "255.255.255.0"
@@ -165,7 +165,7 @@
                 {
                     "name": "eth1",
                     "pair": "rfvmD.1",
-                    "dp_id": "5", 
+                    "dp_id": "8", 
                     "dp_port": "1", 
                     "dp": "dp0",
                     "id": "1", 
@@ -174,7 +174,7 @@
                 {
                     "name": "eth2",
                     "pair": "rfvmD.2",
-                    "dp_id": "5", 
+                    "dp_id": "8", 
                     "dp_port": "2", 
                     "dp": "dp0",
                     "id": "2", 
@@ -183,7 +183,7 @@
                 {
                     "name": "eth3",
                     "pair": "rfvmD.3",
-                    "dp_id": "5", 
+                    "dp_id": "8", 
                     "dp_port": "3", 
                     "dp": "dp0",
                     "id": "3", 
@@ -192,7 +192,7 @@
                 {
                     "name": "eth4",
                     "pair": "rfvmD.4",
-                    "dp_id": "5", 
+                    "dp_id": "8", 
                     "dp_port": "4", 
                     "dp": "dp0",
                     "id": "4", 

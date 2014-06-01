@@ -1,6 +1,6 @@
 vm_id,vm_port,ct_id,dp_id,dp_port
 <% @vms.each do |vm_name,vm| -%>
-<% vm_id = vm['rf_interfaces'].select { |iface| iface['name'] == 'eth0' }.first['mac'].gsub(':','').upcase -%>
+<% vm_id = "%X" % vm['rf_interfaces'].select { |iface| iface['name'] == 'eth0' }.first['mac'].gsub(':','').upcase.to_i(16) -%>
 <% ct_id = 0 -%>
 <% vm['quagga_interfaces'].each do |iface| -%>
 <%= vm_id -%>,<%= iface['id'] -%>,<%= ct_id -%>,<%= iface['dp_id'] -%>,<%= iface['dp_port'] %>

@@ -9,7 +9,9 @@ class routeflow::mongodb ()
         db.getCollection('rfconfig').drop(); 
         db.getCollection('rfstats').drop(); 
         db.getCollection('rfclient<->rfserver').drop(); 
-        db.getCollection('rfserver<->rfproxy').drop(); \""
+        db.getCollection('rfserver<->rfproxy').drop(); \"",
+       notify => [Service['controller_pox'],Service['rfserver']],
+       before => [Service['controller_pox'],Service['rfserver']]
       }
 
 }
